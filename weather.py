@@ -10,7 +10,7 @@ def get_data():
     city_name = city.get()
 
     data = requests.get(
-        "https://api.openweathermap.org/data/2.5/weather?q=" + city_name + "&appid=1583c818415a229f09fb3f11a7e99051").json()
+        "https://api.openweathermap.org/data/2.5/weather?q=" + city_name + "&appid=?").json()
 
     weather_main = data["weather"][0]["main"].lower()
     w1.config(text=data["weather"][0]["main"])
